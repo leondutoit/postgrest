@@ -105,7 +105,7 @@ findProc qi payloadKeys paramsAsSingleObject allProcs =
 transactionMode :: Maybe ProcDescription -> Action -> HT.Mode
 transactionMode proc action =
   case action of
-    ActionRead -> HT.Read
+    ActionRead -> HT.Write
     ActionInfo -> HT.Read
     ActionInspect -> HT.Read
     ActionInvoke{isReadOnly=False} ->
